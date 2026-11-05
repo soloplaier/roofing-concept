@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roofing and Construction Quote Page Concept</title>
+<meta name="description" content="Concept landing page for a London roofing and construction business: instant estimate, free survey, written quote within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600..900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14202b; --steel:#3f5566; --mist:#eaf0f4; --paper:#f8fafb; --line:#d5dee5; --amber:#f2a900; --amber-ink:#2b1f00; --white:#fff;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --sans:"Source Sans 3",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);font-stretch:85%;letter-spacing:-.01em;line-height:1.02;margin:0;text-transform:uppercase;text-wrap:balance}
+h1{font-size:clamp(2.6rem,9vw,5.2rem);font-weight:900}
+h2{font-size:clamp(1.9rem,5vw,3.1rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:800}
+p{margin:0}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-family:var(--display);font-stretch:90%;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:var(--amber);margin-bottom:14px}
+.eyebrow.dark{color:var(--steel)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:6px;font-family:var(--display);font-stretch:90%;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,.opt:focus-visible,.ba input:focus-visible+.knob{outline:3px solid var(--amber);outline-offset:3px}
+.btn-amber{background:var(--amber);color:var(--amber-ink)}
+.btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
+.sample{display:inline-block;font-family:var(--display);font-stretch:90%;font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;background:#fff3cf;color:#6b4d00;border:1px solid #f0d98a;border-radius:99px;padding:2px 9px;vertical-align:middle}
+
+.ribbon{background:var(--amber);color:var(--amber-ink);font-size:.82rem;font-weight:600;text-align:center;padding:7px 14px}
+
+header{background:var(--ink);color:var(--white)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--display);font-stretch:80%;font-weight:900;font-size:1.35rem;letter-spacing:.02em;text-transform:uppercase;text-decoration:none}
+.logo b{color:var(--amber)}
+.nav a.call{font-weight:600;text-decoration:none;white-space:nowrap}
+.nav .links{display:none;gap:26px;font-size:.95rem}
+.nav .links a{text-decoration:none;color:#c9d6df}
+@media(min-width:860px){.nav .links{display:flex}}
+@media(max-width:520px){.logo{font-size:1.05rem}.nav a.call{display:none}}
+.chip24{display:inline-flex;align-items:center;gap:8px;background:#fff3cf;color:#6b4d00;border:1px solid #f0d98a;border-radius:99px;padding:4px 12px;font-size:.82rem;font-weight:600;margin:0 0 12px}
+.chip24::before{content:"";width:.6em;height:.6em;background:var(--amber);clip-path:polygon(0 100%,50% 0,100% 100%)}
+.emerg{background:#0d151d;color:#c9d6df;font-size:.9rem;text-align:center;padding:8px 14px}
+.emerg a{color:var(--amber);font-weight:600}
+
+/* hero */
+.hero{background:var(--ink);color:var(--white);position:relative;overflow:hidden;padding-block:56px 150px;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 34px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 46px)}
+.skyline{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto}
+.hero-grid{display:grid;gap:36px;position:relative;z-index:1}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:center}}
+.hero p.lead{font-size:1.2rem;color:#c9d6df;max-width:34rem;margin-top:20px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ticks{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;padding:0;list-style:none;font-size:.95rem;color:#c9d6df}
+.ticks li::before{content:"";display:inline-block;width:.6em;height:.6em;margin-right:9px;background:var(--amber);clip-path:polygon(0 100%,50% 0,100% 100%)}
+.rating{display:flex;align-items:center;gap:12px;margin-top:26px;font-size:.95rem;color:#c9d6df}
+.rating .stars{color:var(--amber);letter-spacing:3px}
+
+/* funnel */
+.funnel{background:var(--white);color:var(--ink);border-radius:12px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.fhead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+.fhead h3{font-size:1.1rem}
+.fstep{font-size:.8rem;color:var(--steel);font-weight:600}
+.bar{height:6px;background:var(--mist);border-radius:99px;overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;width:33%;background:var(--amber);transition:width .3s}
+.fp{display:none}.fp.on{display:block}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;width:100%;min-height:56px;padding:10px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--white);font:inherit;font-weight:600;cursor:pointer;color:var(--ink);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--amber);background:#fffaf0}
+.opt svg{flex:none;width:30px;height:30px}
+label{display:block;font-weight:600;font-size:.92rem;margin:12px 0 6px}
+input[type=text],input[type=tel],select{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:6px;padding:0 14px;font:inherit;background:var(--white);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--amber)}
+.size-out{font-family:var(--display);font-weight:800;font-size:1.6rem;margin-top:2px}
+.nextrow{display:flex;gap:10px;margin-top:18px}
+.nextrow .btn{flex:1}
+.btn-line{background:var(--white);border-color:var(--line);color:var(--ink)}
+.est-box{background:var(--ink);color:var(--white);border-radius:8px;padding:16px 18px;margin-bottom:6px}
+.est-box .pill{display:inline-block;background:rgba(255,255,255,.1);border-radius:99px;padding:3px 11px;font-size:.78rem;color:#c9d6df}
+.est-box .range{font-family:var(--display);font-stretch:80%;font-weight:900;font-size:2.3rem;color:var(--amber);line-height:1;margin:8px 0 4px}
+.est-box p{color:#c9d6df;font-size:.88rem}
+.fine{font-size:.8rem;color:var(--steel);margin-top:10px}
+.thanks h3{margin-bottom:8px}
+.lead-card{border:1.5px dashed var(--line);border-radius:8px;padding:14px;margin-top:14px;font-size:.92rem;background:#fbfcfd}
+.lead-card b{display:block;font-family:var(--display);font-stretch:90%;text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;color:var(--steel);margin-bottom:6px}
+.lead-card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 12px}
+.lead-card dt{color:var(--steel)}.lead-card dd{margin:0;font-weight:600}
+
+section{padding-block:72px}
+.trust{padding-block:0 30px;margin-top:-14px;position:relative;z-index:2}
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:760px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+.stat{border-top:4px solid var(--amber);background:var(--white);padding:18px;border-radius:0 0 8px 8px;box-shadow:0 10px 30px -22px rgba(20,32,43,.5)}
+.stat b{display:block;font-family:var(--display);font-stretch:80%;font-weight:900;font-size:2rem;text-transform:uppercase;line-height:1}
+.stat span{color:var(--steel);font-size:.92rem}
+.accr{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.accr span{border:1.5px solid var(--line);border-radius:6px;padding:8px 16px;font-size:.85rem;color:var(--steel);background:var(--white);font-weight:600}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-head p{color:var(--steel);margin-top:14px}
+
+.services{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.services{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.services{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:22px;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--amber)}
+.svc svg{width:38px;height:38px;margin-bottom:10px}
+.svc p{color:var(--steel);margin-top:8px;font-size:.98rem}
+
+/* before after */
+.beaf{background:var(--mist);clip-path:polygon(0 36px,50% 0,100% 36px,100% 100%,0 100%);padding-top:100px}
+.ba{position:relative;aspect-ratio:16/9;max-width:900px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#ccd;user-select:none;touch-action:pan-y;--pos:50%}
+.ba .layer{position:absolute;inset:0}
+.ba .layer svg{width:100%;height:100%}
+.ba .before{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:var(--white);z-index:2;transform:translateX(-1.5px);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.ba .knob{position:absolute;top:50%;left:var(--pos);width:46px;height:46px;border-radius:50%;background:var(--amber);color:var(--amber-ink);display:grid;place-items:center;font-weight:900;transform:translate(-50%,-50%);z-index:2;box-shadow:0 6px 18px rgba(0,0,0,.35);pointer-events:none}
+.ba .tag{position:absolute;top:14px;z-index:2;background:rgba(20,32,43,.85);color:#fff;font-family:var(--display);font-stretch:90%;font-weight:800;letter-spacing:.1em;font-size:.78rem;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px;background:var(--amber);color:var(--amber-ink)}
+.cap{text-align:center;color:var(--steel);font-size:.9rem;margin-top:14px}
+
+/* crew */
+.crew{display:grid;gap:18px}
+@media(min-width:760px){.crew{grid-template-columns:repeat(3,1fr)}}
+.person{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.person .pic{background:linear-gradient(160deg,#dfe8ee,#f3f7f9);padding:18px 0 0;display:grid;place-items:end center}
+.person .pic svg{width:170px;height:170px}
+.person .body{padding:18px 20px 22px}
+.person .role{color:var(--steel);font-size:.9rem;margin-bottom:8px}
+.person blockquote{margin:10px 0 0;padding-left:14px;border-left:3px solid var(--amber);color:var(--ink);font-style:italic}
+
+.pull{background:var(--ink);color:var(--white);text-align:center;padding-block:64px;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 34px)}
+.pull blockquote{margin:0 auto;max-width:820px;font-family:var(--display);font-stretch:85%;font-weight:800;text-transform:uppercase;font-size:clamp(1.5rem,4.6vw,2.6rem);line-height:1.12}
+.pull blockquote::before{content:"\201C";display:block;color:var(--amber);font-size:4rem;line-height:.6;margin-bottom:6px}
+.pull cite{display:block;margin-top:18px;font-style:normal;color:#c9d6df;font-size:.95rem}
+
+.steps{display:grid;gap:16px;counter-reset:s}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{counter-increment:s;border-top:3px solid var(--ink);padding-top:16px}
+.step::before{content:"0" counter(s);font-family:var(--display);font-weight:900;font-size:1rem;color:var(--amber);background:var(--ink);padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:10px}
+.step p{color:var(--steel);margin-top:6px;font-size:.98rem}
+
+.work{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:560px){.work{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.work{grid-template-columns:repeat(3,1fr)}}
+.proj{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.proj svg{width:100%;height:auto}
+.proj .t{padding:12px 16px 14px}
+.proj .t b{display:block;font-family:var(--display);font-stretch:90%;text-transform:uppercase;font-size:1rem}
+.proj .t span{color:var(--steel);font-size:.88rem}
+
+.reviews{display:grid;gap:14px}
+@media(min-width:860px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column}
+.stars{color:var(--amber);letter-spacing:3px;font-size:1.1rem}
+.rev p{margin-top:8px;flex:1}
+.who{display:flex;align-items:center;gap:12px;margin-top:16px}
+.who .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#fff}
+.who small{display:block;color:var(--steel)}
+
+details{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:0 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--amber);font-weight:900}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--steel);padding-bottom:16px}
+
+.final{background:var(--ink);color:var(--white);text-align:center;clip-path:polygon(0 40px,50% 0,100% 40px,100% 100%,0 100%);padding-top:110px}
+.final p{color:#c9d6df;max-width:520px;margin:14px auto 26px}
+footer{background:var(--ink);color:#9db0bd;padding:0 0 90px;font-size:.88rem;text-align:center}
+footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:24px}
+.sticky{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px;background:rgba(20,32,43,.96);z-index:50}
+.sticky .btn{flex:1;min-height:48px;padding:0 10px}
+@media(min-width:860px){.sticky{display:none}footer{padding-bottom:30px}}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn,.bar i{transition:none}}
+</style>
+</head>
+<body>
+<!-- CONCEPT PREVIEW: every name, quote, review, figure, picture and price on this page is a fictional sample. Replace all of it with real material before launch. -->
+<div class="ribbon">Concept preview by SOLO. People, quotes, reviews, figures, pictures and prices are fictional samples. Replace them with the real thing before launch.</div>
+
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#top">[Business] <b>Roofing &amp; Construction</b></a>
+  <nav class="links" aria-label="Main"><a href="#services">Services</a><a href="#work">Our work</a><a href="#crew">The crew</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></nav>
+  <a class="call" href="tel:+440000000000">[Phone number]</a>
+ </div>
+ <div class="emerg">Roof leak right now? Emergency call-outs across London: <a href="tel:+440000000000">[phone number]</a></div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">Roofing and construction in London</div>
+   <h1>Roofing and building,<br>done properly.</h1>
+   <p class="lead">Re-roofs, repairs, extensions and building work for homeowners across London. Get an instant price range in 20 seconds, then a free survey and your written quote within 24 hours.</p>
+   <div class="cta"><a class="btn btn-amber" href="#quote">Get my instant estimate</a><a class="btn btn-ghost" href="tel:+440000000000">Call [phone number]</a></div>
+   <ul class="ticks"><li>Free survey</li><li>Quote within 24 hours</li><li>Fully insured</li><li>Clean site, every day</li></ul>
+   <div class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span><b>4.9</b> from 120 reviews <span class="sample">Sample</span></span></div>
+  </div>
+
+  <div class="funnel" id="quote">
+   <div class="fhead"><h3>Instant estimate</h3><span class="fstep" id="fstep">Step 1 of 3</span></div>
+   <p class="chip24">Written quote within 24 hours</p>
+   <div class="bar"><i id="fbar"></i></div>
+
+   <div class="fp on" data-p="1">
+    <p style="font-weight:600;margin-bottom:10px">What do you need?</p>
+    <div class="opts">
+     <button class="opt" type="button" data-job="reroof"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17 16 5l14 12" fill="none" stroke="#14202b" stroke-width="2.4" stroke-linejoin="round"/><path d="M6 15v13h20V15" fill="#f2a900" stroke="#14202b" stroke-width="2"/></svg>Full re-roof</button>
+     <button class="opt" type="button" data-job="repair"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17 16 5l14 12" fill="none" stroke="#14202b" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 14c3 4 4 6 0 9-4-3-3-5 0-9z" fill="#f2a900" stroke="#14202b" stroke-width="1.6"/></svg>Repair or leak</button>
+     <button class="opt" type="button" data-job="flat"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="12" width="26" height="14" fill="#f2a900" stroke="#14202b" stroke-width="2"/><path d="M1 12h30" stroke="#14202b" stroke-width="3"/></svg>Flat roof</button>
+     <button class="opt" type="button" data-job="build"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28V14l10-8 8 6v16z" fill="#f2a900" stroke="#14202b" stroke-width="2" stroke-linejoin="round"/><path d="M22 28V18h6v10" fill="none" stroke="#14202b" stroke-width="2"/></svg>Extension, loft or building work</button>
+     <button class="opt" type="button" data-job="other"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 28V10h6v18M18 28V16h6v12" fill="#f2a900" stroke="#14202b" stroke-width="2"/><path d="M4 28h24" stroke="#14202b" stroke-width="2.4"/></svg>Chimney, gutters or fascias</button>
+    </div>
+   </div>
+
+   <div class="fp" data-p="2">
+    <div id="sizeBlock">
+     <label for="mat" style="margin-top:0">Roof covering</label>
+     <select id="mat"><option value="tile">Concrete or clay tile</option><option value="slate">Natural slate</option></select>
+     <label for="size">Approximate roof size</label>
+     <input id="size" type="range" min="20" max="200" step="5" value="60">
+     <div class="size-out"><span id="sizeOut">60</span> m&sup2;</div>
+     <label for="prop">Property type</label>
+     <select id="prop"><option value="1">Terraced or semi-detached</option><option value="1.1">Detached</option><option value="1.2">Hard access or three storeys</option></select>
+    </div>
+    <div id="urgBlock" hidden>
+     <label for="urg" style="margin-top:0">How urgent is it?</label>
+     <select id="urg"><option>Leaking now</option><option>Within a few weeks</option><option>Planning ahead</option></select>
+    </div>
+    <div id="buildBlock" hidden>
+     <label for="btype" style="margin-top:0">What is the project?</label>
+     <select id="btype"><option>Rear or side extension</option><option>Loft conversion</option><option>Renovation or refurbishment</option><option>Brickwork or groundworks</option><option>Something else</option></select>
+     <label for="start">When do you want to start?</label>
+     <select id="start"><option>As soon as possible</option><option>Within 3 months</option><option>Just planning ahead</option></select>
+    </div>
+    <div class="nextrow"><button class="btn btn-line" type="button" data-back>Back</button><button class="btn btn-amber" type="button" id="to3">See my estimate</button></div>
+   </div>
+
+   <div class="fp" data-p="3">
+    <div class="est-box"><span class="pill">Indicative range</span><div class="range" id="rng">&pound;0 &ndash; &pound;0</div><p id="rngNote">Includes labour, materials and clearance. Scaffolding and any hidden repairs are confirmed on the survey.</p></div>
+    <p class="fine" id="exNote">Example rates for this concept page. Replace with your real prices before launch.</p>
+    <label for="qn">Your name</label><input id="qn" type="text" autocomplete="name">
+    <label for="qp">Mobile number</label><input id="qp" type="tel" inputmode="tel" autocomplete="tel">
+    <label for="qa">Postcode</label><input id="qa" type="text" autocomplete="postal-code">
+    <div class="nextrow"><button class="btn btn-line" type="button" data-back>Back</button><button class="btn btn-amber" type="button" id="send">Send my written quote</button></div>
+    <p class="fine">No obligation. We only use your details to reply about your quote.</p>
+   </div>
+
+   <div class="fp thanks" data-p="4">
+    <h3>Thanks, we have it</h3>
+    <p>We will call you from [phone number] the same working day to arrange your free survey. Your written quote follows within 24 hours.</p>
+    <div class="lead-card"><b>Preview: what the roofing team receives</b><dl id="leadDl"></dl></div>
+   </div>
+  </div>
+ </div>
+ <svg class="skyline" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#f8fafb" d="M0 120V70l40-34 40 34v-6h22V48h14v22l36-30 36 30V60h18V44h12v16l30-26 30 26v12h24l36-32 36 32v-4h20V50h12v18l40-34 40 34v8h28V58h14v18l34-28 34 28V66h20l42-36 42 36v-6h22V46h12v14l38-32 38 32v10h24l40-34 40 34v-2h18V54h12v16l36-30 36 30v-6h26l40-34 40 34v8h22V56h14v20l34-28 34 28V62h22l42-30 42 30v-8h18V42h12v14l30-24 30 24v12h24V120Z"/></svg>
+</section>
+
+<section class="trust"><div class="wrap reveal">
+ <div class="trust-grid">
+  <div class="stat"><b>18 yrs</b><span>Trading in [Area]</span></div>
+  <div class="stat"><b>2,400+</b><span>Projects completed</span></div>
+  <div class="stat"><b>4.9/5</b><span>Average review score</span></div>
+  <div class="stat"><b>24 hrs</b><span>Written quote turnaround</span></div>
+ </div>
+ <div class="accr"><span>[Accreditation 1]</span><span>[Accreditation 2]</span><span>[Trade body]</span><span>[Guarantee scheme]</span></div>
+ <p class="cap">Sample figures for illustration <span class="sample">Sample</span></p>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">What we do</div><h2>Roofing and building, under one roof</h2><p>From a single slipped tile to a full extension, one London team handles it from survey to clean-up.</p></div>
+ <div class="services reveal">
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17 16 5l14 12" fill="none" stroke="#14202b" stroke-width="2.4" stroke-linejoin="round"/><path d="M6 15v13h20V15" fill="#f2a900" stroke="#14202b" stroke-width="2"/></svg><h3>Full re-roofs</h3><p>Tile and slate, stripped, re-battened and finished to a high standard.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17 16 5l14 12" fill="none" stroke="#14202b" stroke-width="2.4" stroke-linejoin="round"/><path d="M16 14c3 4 4 6 0 9-4-3-3-5 0-9z" fill="#f2a900" stroke="#14202b" stroke-width="1.6"/></svg><h3>Roof repairs</h3><p>Leaks, slipped tiles, flashing and storm damage fixed quickly.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="12" width="26" height="14" fill="#f2a900" stroke="#14202b" stroke-width="2"/><path d="M1 12h30" stroke="#14202b" stroke-width="3"/></svg><h3>Flat roofs</h3><p>Durable flat roofing systems with proper drainage and detailing.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 28V8h8v20" fill="#f2a900" stroke="#14202b" stroke-width="2"/><path d="M8 8h12M4 28h24" stroke="#14202b" stroke-width="2.4"/></svg><h3>Chimneys</h3><p>Repointing, lead flashing and stack rebuilds.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 10h26v5H3z" fill="#f2a900" stroke="#14202b" stroke-width="2"/><path d="M8 15v9M24 15v6" stroke="#14202b" stroke-width="2.4"/></svg><h3>Fascias and gutters</h3><p>Fascias, soffits and guttering that finish the job neatly.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28V14l10-8 14 8v14z" fill="#f2a900" stroke="#14202b" stroke-width="2" stroke-linejoin="round"/><path d="M12 28v-8h6v8" fill="none" stroke="#14202b" stroke-width="2"/></svg><h3>Extensions</h3><p>Rear, side and wrap-around extensions from groundwork to roof, with one point of contact.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 28V16L16 5l13 11v12z" fill="#f2a900" stroke="#14202b" stroke-width="2" stroke-linejoin="round"/><rect x="12" y="14" width="8" height="7" fill="#fff" stroke="#14202b" stroke-width="1.8"/></svg><h3>Loft conversions</h3><p>Dormer, hip-to-gable and mansard conversions that add real living space.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27 17 15M13 7l12 12" stroke="#14202b" stroke-width="2.4" stroke-linecap="round"/><rect x="18" y="4" width="10" height="7" rx="1.5" transform="rotate(35 23 8)" fill="#f2a900" stroke="#14202b" stroke-width="1.8"/></svg><h3>Renovations</h3><p>Full refurbishments, kitchens, bathrooms and structural alterations.</p></div>
+  <div class="svc"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#f2a900" stroke="#14202b" stroke-width="1.8"><rect x="3" y="6" width="12" height="7"/><rect x="17" y="6" width="12" height="7"/><rect x="3" y="15" width="7" height="7"/><rect x="12" y="15" width="12" height="7"/><rect x="3" y="24" width="12" height="5"/><rect x="17" y="24" width="12" height="5"/></g></svg><h3>Brickwork and groundworks</h3><p>Foundations, walls, repointing, driveways and patios, built to last.</p></div>
+ </div>
+</div></section>
+
+<section class="beaf" id="beaf"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">The difference</div><h2>Drag to see the finish</h2></div>
+ <div class="ba reveal" id="ba">
+  <div class="layer after" id="baAfter"></div>
+  <div class="layer before" id="baBefore"></div>
+  <span class="tag l">Before</span><span class="tag r">After</span>
+  <div class="line"></div><div class="knob" aria-hidden="true">&harr;</div>
+  <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Compare before and after">
+ </div>
+ <p class="cap">Illustration. Replace with your own before and after photos <span class="sample">Sample</span></p>
+</div></section>
+
+<section id="crew"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">The crew</div><h2>The people who turn up</h2><p>A small, trusted team from survey to handover. Fictional sample profiles for the concept.</p></div>
+ <div class="crew reveal" id="crewGrid"></div>
+</div></section>
+
+<section class="pull"><div class="wrap reveal">
+ <blockquote>I would rather lose a job than leave a roof I would not put my own name on.</blockquote>
+ <cite>Dan Mercer, founder <span class="sample">Sample quote</span></cite>
+</div></section>
+
+<section id="process"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">How it works</div><h2>Four steps, no surprises</h2></div>
+ <div class="steps reveal">
+  <div class="step"><h3>Free survey</h3><p>We visit, inspect the roof properly and take photos.</p></div>
+  <div class="step"><h3>Quote in 24 hours</h3><p>A fixed, itemised price in writing within 24 hours of the survey. No hidden extras.</p></div>
+  <div class="step"><h3>The work</h3><p>A tidy site and daily updates until it is finished.</p></div>
+  <div class="step"><h3>Handover</h3><p>A final check with you, photos of the finished roof and a guarantee.</p></div>
+ </div>
+</div></section>
+
+<section id="work" style="background:var(--mist)"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">Recent work</div><h2>Roofs we have finished</h2><p>Illustrated sample projects. Replace with real photos.</p></div>
+ <div class="work reveal" id="workGrid"></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+ <div class="sec-head reveal"><div class="eyebrow dark">What customers say</div><h2>In their words</h2></div>
+ <div class="reviews reveal" id="revGrid"></div>
+ <p class="cap" style="margin-top:18px">Fictional sample reviews for the concept <span class="sample">Sample</span></p>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap" style="max-width:780px">
+ <div class="sec-head reveal"><div class="eyebrow dark">Questions</div><h2>Before you ask</h2></div>
+ <div class="reveal">
+  <details><summary>How fast do I get my quote?</summary><p>You see an instant price range online. After your free survey, your fixed written quote arrives within 24 hours. [Confirm this is a promise you can keep for every job.]</p></details>
+  <details><summary>Is the survey really free?</summary><p>Yes. We inspect the roof, take photos and send a written quote with no charge and no obligation.</p></details>
+  <details><summary>How accurate is the instant estimate?</summary><p>It is an indicative range based on roof size and type. We confirm an exact fixed price after the free survey.</p></details>
+  <details><summary>How long does a re-roof take?</summary><p>[Typical timescale, for example 3 to 7 days for an average house, depending on size and weather.]</p></details>
+  <details><summary>Do you give a guarantee?</summary><p>[Describe your workmanship guarantee and any manufacturer guarantees.]</p></details>
+  <details><summary>Can I pay in stages?</summary><p>[Describe your payment terms and any finance options.]</p></details>
+  <details><summary>Which areas do you cover?</summary><p>[List the London boroughs and postcodes covered.]</p></details>
+ </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+ <div class="eyebrow">Ready when you are</div>
+ <h2>Get your free roof quote</h2>
+ <p>Get an instant estimate now, or call and we will come back the same working day. Your written quote follows within 24 hours.</p>
+ <a class="btn btn-amber" href="#quote">Get my instant estimate</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">[Business name] Roofing and Construction &middot; London &middot; [Address] &middot; [Company number] &middot; [Phone number]</div></footer>
+<div class="sticky"><a class="btn btn-amber" href="tel:+440000000000">Call now</a><a class="btn btn-ghost" href="#quote">Free estimate</a></div>
+
+<script>
+(function(){
+  /* ---------- illustrations (all fictional samples) ---------- */
+  function house(o){
+    o=o||{};var roof=o.roof||'#3c4a57',wall=o.wall||'#e4d9c6',sky=o.sky||'#cfe3f1',flat=!!o.flat,chim=o.chim!==false,dorm=!!o.dorm,worn=!!o.worn,ext=!!o.ext;
+    var s='<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a house roof">';
+    s+='<defs><linearGradient id="g'+(o.id||0)+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+sky+'"/><stop offset="1" stop-color="#f4f8fb"/></linearGradient>';
+    s+='<pattern id="t'+(o.id||0)+'" width="16" height="10" patternUnits="userSpaceOnUse"><path d="M0 9.5h16M8 0v9.5M0 0v0" stroke="rgba(0,0,0,.28)" stroke-width="1" fill="none"/></pattern></defs>';
+    s+='<rect width="400" height="250" fill="url(#g'+(o.id||0)+')"/>';
+    s+='<ellipse cx="320" cy="48" rx="34" ry="11" fill="#fff" opacity=".85"/><ellipse cx="344" cy="40" rx="24" ry="9" fill="#fff" opacity=".85"/>';
+    s+='<rect y="214" width="400" height="36" fill="#9fb59a"/>';
+    s+='<rect x="60" y="130" width="280" height="86" fill="'+wall+'"/>';
+    s+='<rect x="92" y="150" width="34" height="38" fill="#7f9db3" stroke="#fff" stroke-width="3"/><rect x="274" y="150" width="34" height="38" fill="#7f9db3" stroke="#fff" stroke-width="3"/><rect x="184" y="164" width="32" height="52" fill="#3b5163"/><circle cx="210" cy="192" r="2" fill="#f2a900"/>';
+    if(flat){
+      s+='<rect x="52" y="112" width="296" height="22" fill="'+roof+'"/><rect x="52" y="108" width="296" height="6" fill="#aab6bf"/>';
+    }else{
+      s+='<polygon points="40,134 200,52 360,134" fill="'+roof+'"/><polygon points="40,134 200,52 360,134" fill="url(#t'+(o.id||0)+')"/>';
+      s+='<path d="M40 134 200 52 360 134" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="3"/>';
+      if(worn){s+='<g fill="#6b8a52" opacity=".75"><ellipse cx="120" cy="108" rx="14" ry="6"/><ellipse cx="236" cy="96" rx="18" ry="7"/><ellipse cx="288" cy="118" rx="12" ry="5"/><ellipse cx="170" cy="84" rx="9" ry="4"/></g><g fill="#2a323a"><rect x="150" y="104" width="14" height="8"/><rect x="262" y="108" width="12" height="7"/><rect x="104" y="120" width="10" height="6"/></g>';}
+    }
+    if(ext){s+='<rect x="336" y="160" width="58" height="56" fill="'+wall+'"/><rect x="330" y="150" width="70" height="12" fill="'+roof+'"/><rect x="330" y="146" width="70" height="5" fill="#aab6bf"/><rect x="346" y="174" width="34" height="30" fill="#7f9db3" stroke="#fff" stroke-width="3"/><path d="M346 189h34M363 174v30" stroke="#fff" stroke-width="2"/>';}
+    if(chim){s+='<rect x="268" y="60" width="24" height="46" fill="#a4553b"/><rect x="264" y="56" width="32" height="8" fill="#7d3f2b"/>';}
+    if(dorm){s+='<rect x="168" y="86" width="64" height="38" fill="'+wall+'" stroke="#fff" stroke-width="2"/><polygon points="160,88 200,66 240,88" fill="'+roof+'"/><rect x="186" y="96" width="28" height="22" fill="#7f9db3" stroke="#fff" stroke-width="3"/>';}
+    s+='</svg>';return s;
+  }
+  function person(o){
+    var s='<svg viewBox="0 0 120 120" role="img" aria-label="Illustrated team member">';
+    s+='<circle cx="60" cy="60" r="60" fill="#e7eef3"/>';
+    s+='<path d="M14 120c0-26 20-40 46-40s46 14 46 40z" fill="#f2a900"/><path d="M38 120V94M82 120V94" stroke="#fff" stroke-width="5"/><path d="M44 82c4 8 10 11 16 11s12-3 16-11" fill="none" stroke="#14202b" stroke-width="3"/>';
+    s+='<rect x="52" y="68" width="16" height="16" rx="6" fill="'+o.skin+'"/>';
+    s+='<circle cx="60" cy="50" r="22" fill="'+o.skin+'"/>';
+    if(o.beard)s+='<path d="M40 54c2 20 10 26 20 26s18-6 20-26c-4 8-10 10-20 10s-16-2-20-10z" fill="'+o.hair+'"/>';
+    if(o.hat){s+='<path d="M36 46c0-18 10-26 24-26s24 8 24 26z" fill="'+o.hat+'"/><rect x="32" y="43" width="56" height="7" rx="3" fill="'+o.hat+'" stroke="rgba(0,0,0,.15)"/><rect x="56" y="22" width="8" height="22" fill="rgba(255,255,255,.35)"/>';}
+    else{s+='<path d="M36 52c-2-22 10-32 26-30 14 2 22 12 20 30-4-10-12-16-24-16s-18 6-22 16z" fill="'+o.hair+'"/>'; if(o.long)s+='<path d="M36 52c-4 14-2 28 4 34l4-30zM84 52c4 14 2 28-4 34l-4-30z" fill="'+o.hair+'"/>';}
+    s+='<circle cx="52" cy="52" r="2.2" fill="#14202b"/><circle cx="68" cy="52" r="2.2" fill="#14202b"/><path d="M53 62c4 4 10 4 14 0" fill="none" stroke="#14202b" stroke-width="2" stroke-linecap="round"/>';
+    s+='</svg>';return s;
+  }
+  /* before / after */
+  document.getElementById('baBefore').innerHTML=house({id:'b1',roof:'#6f7a74',worn:true,sky:'#c9d3da',wall:'#d8cfbf'});
+  document.getElementById('baAfter').innerHTML=house({id:'a1',roof:'#2f3d4a',sky:'#cfe6f6',wall:'#e4d9c6'});
+  var ba=document.getElementById('ba'),rg=document.getElementById('baRange');
+  rg.addEventListener('input',function(){ba.style.setProperty('--pos',rg.value+'%')});
+  /* crew */
+  var crew=[
+    {n:'Dan Mercer',r:'Founder and project lead',q:'If it is not right, we do it again. No arguments.',p:{skin:'#e0ad8a',hair:'#4a3426',hat:'#f2f2f2',beard:true}},
+    {n:'Priya Nair',r:'Surveyor and quotes',q:'You get the full picture and a fixed price before we start.',p:{skin:'#b97a57',hair:'#1f1612',long:true}},
+    {n:'Leo Hartley',r:'Site foreman',q:'Tidy site, daily updates, and we leave it cleaner than we found it.',p:{skin:'#f1c9a5',hair:'#8a5a2b',hat:'#f2a900'}}
+  ];
+  document.getElementById('crewGrid').innerHTML=crew.map(function(c){return '<div class="person"><div class="pic">'+person(c.p)+'</div><div class="body"><h3>'+c.n+'</h3><div class="role">'+c.r+' <span class="sample">Sample</span></div><blockquote>'+c.q+'</blockquote></div></div>'}).join('');
+  /* projects */
+  var projects=[
+    {t:'Victorian terrace re-slate',s:'Natural slate, new lead flashings',o:{id:'p1',roof:'#4a5560',wall:'#c9a98c'}},
+    {t:'Detached re-tile',s:'Concrete tile with dry-fix verge',o:{id:'p2',roof:'#7a3f33',wall:'#e8dfce',dorm:true}},
+    {t:'Rear extension flat roof',s:'New flat roof with rooflights',o:{id:'p3',roof:'#394650',wall:'#dad2c3',flat:true,chim:false}},
+    {t:'Side extension',s:'New kitchen extension, full build',o:{id:'p4',roof:'#556270',wall:'#e0c9b0',ext:true}},
+    {t:'Storm damage repair',s:'Tiles replaced, ridge re-bedded',o:{id:'p5',roof:'#3c4a57',wall:'#d7d2c8',sky:'#b9c7d2'}},
+    {t:'Loft conversion',s:'Dormer conversion and full re-roof',o:{id:'p6',roof:'#2f3d4a',wall:'#efe6d4',dorm:true}}
+  ];
+  document.getElementById('workGrid').innerHTML=projects.map(function(p){return '<div class="proj">'+house(p.o)+'<div class="t"><b>'+p.t+'</b><span>'+p.s+' <span class="sample">Sample</span></span></div></div>'}).join('');
+  /* reviews */
+  var revs=[
+    {q:'Dan and the team replaced our whole roof in under a week. The quote was fixed, nothing extra appeared, and the garden was spotless afterwards.',n:'Helen R.',w:'Homeowner',c:'#3f5566'},
+    {q:'We had a leak at 9pm on a Friday. Someone was on the roof at 8am on Saturday and the repair was done by lunch. Brilliant.',n:'Marcus & Jo T.',w:'Homeowners',c:'#a4553b'},
+    {q:'Priya explained everything on the survey and the quote was in my inbox the next morning. Our kitchen extension looks fantastic and we have already recommended them to two neighbours.',n:'Amira K.',w:'Homeowner',c:'#5e7a52'}
+  ];
+  document.getElementById('revGrid').innerHTML=revs.map(function(r){return '<div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>'+r.q+'</p><div class="who"><div class="av" style="background:'+r.c+'">'+r.n.charAt(0)+'</div><div><b>'+r.n+'</b><small>'+r.w+'</small></div></div></div>'}).join('');
+
+  /* ---------- funnel ---------- */
+  var RATES={tile:[85,125],slate:[130,190],flat:[70,115]};   /* EXAMPLE RATES per m2. Replace with real prices. */
+  var JOBS={reroof:'Full re-roof',repair:'Repair or leak',flat:'Flat roof',build:'Extension, loft or building work',other:'Chimney, gutters or fascias'};
+  var st={job:'',step:1};
+  var panes=[].slice.call(document.querySelectorAll('.fp')),fstep=document.getElementById('fstep'),fbar=document.getElementById('fbar');
+  var size=document.getElementById('size'),sizeOut=document.getElementById('sizeOut'),mat=document.getElementById('mat'),prop=document.getElementById('prop'),urg=document.getElementById('urg');
+  function track(ev,data){try{(window.dataLayer=window.dataLayer||[]).push({event:ev,job:st.job,data:data||null});if(window.fbq&&ev==='quote_submit')window.fbq('track','Lead')}catch(e){}}
+  function go(n){
+    st.step=n;panes.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-p')==String(n))});
+    if(n<=3){fstep.textContent='Step '+n+' of 3';fbar.style.width=(n*33.3)+'%'}else{fstep.textContent='Done';fbar.style.width='100%'}
+    track('quote_step_'+n);
+  }
+  function fmt(n){return '£'+(Math.round(n/50)*50).toLocaleString('en-GB')}
+  function estimate(){
+    var range=document.getElementById('rng'),note=document.getElementById('rngNote'),ex=document.getElementById('exNote');
+    var calc=(st.job==='reroof'||st.job==='flat');
+    if(calc){
+      var key=st.job==='flat'?'flat':mat.value,r=RATES[key],k=parseFloat(prop.value),a=parseFloat(size.value);
+      range.textContent=fmt(a*r[0]*k)+' – '+fmt(a*r[1]*k);note.textContent='Includes labour, materials and clearance. Scaffolding and any hidden repairs are confirmed on the survey.';ex.style.display='';
+      return fmt(a*r[0]*k)+' to '+fmt(a*r[1]*k);
+    }
+    range.textContent='Free survey';note.textContent='We price repairs and building work after a free survey, so you get an exact figure and no guesswork. Your written quote follows within 24 hours.';ex.style.display='none';return 'Free survey';
+  }
+  [].slice.call(document.querySelectorAll('.opt')).forEach(function(b){b.addEventListener('click',function(){
+    st.job=b.getAttribute('data-job');var calc=(st.job==='reroof'||st.job==='flat'),build=(st.job==='build');
+    document.getElementById('sizeBlock').hidden=!calc;document.getElementById('urgBlock').hidden=calc||build;document.getElementById('buildBlock').hidden=!build;
+    mat.parentNode.querySelector('label[for=mat]').style.display=(st.job==='flat')?'none':'';mat.style.display=(st.job==='flat')?'none':'';
+    go(2);
+  })});
+  size.addEventListener('input',function(){sizeOut.textContent=size.value});
+  document.getElementById('to3').addEventListener('click',function(){estimate();go(3)});
+  [].slice.call(document.querySelectorAll('[data-back]')).forEach(function(b){b.addEventListener('click',function(){go(st.step-1)})});
+  document.getElementById('send').addEventListener('click',function(){
+    var n=document.getElementById('qn'),p=document.getElementById('qp'),a=document.getElementById('qa');
+    if(!n.value.trim()){n.focus();return}if(!p.value.trim()){p.focus();return}
+    var calc=(st.job==='reroof'||st.job==='flat'),est=estimate();
+    var rows=[['Job',JOBS[st.job]]];
+    if(calc){rows.push(['Roof size',size.value+' m²']);if(st.job!=='flat')rows.push(['Covering',mat.options[mat.selectedIndex].text]);rows.push(['Property',prop.options[prop.selectedIndex].text]);rows.push(['Indicative range',est])}
+    else if(st.job==='build')rows.push(['Project',document.getElementById('btype').value],['Start',document.getElementById('start').value],['Quote promised','Within 24 hours of survey']);
+    else rows.push(['Urgency',urg.value]);
+    rows.push(['Name',n.value.trim()],['Mobile',p.value.trim()],['Postcode',a.value.trim()||'Not given']);
+    document.getElementById('leadDl').innerHTML=rows.map(function(r){return '<dt>'+r[0]+'</dt><dd></dd>'}).join('');
+    [].slice.call(document.querySelectorAll('#leadDl dd')).forEach(function(d,i){d.textContent=rows[i][1]});
+    /* TODO: connect to the real form handler / CRM before launch */
+    track('quote_submit',{estimate:est});go(4);
+  });
+
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+})();
+</script>
+</body>
+</html>
